@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(void)
+{
+    // creates 3 int numbers for user to input (can add more number variables)
+    int number1, number2, number3;
+    
+    // variable to store highest number of the 3 (or more)
+    int highestNumber;
+    
+    // asks user for 3 int number inputs and stores them using scanf
+    printf("Enter 1st number:\n ");
+    scanf("%d", &number1);
+   
+    printf("Enter 2nd number:\n ");
+    scanf("%d", &number2);
+    
+    printf("Enter 3rd number:\n ");
+    scanf("%d", &number3);
+    
+    // temporarily assigns number1 to highestNumber variable 
+    highestNumber = number1;
+    
+    // if number2 is higher than number1 & number3, assign that value to highestNumber
+    if (number2 > number1 && number2 > number3)
+    highestNumber = number2;
+    
+    if (number3 > number1 && number3 > number2)
+    highestNumber = number3;
+    
+    printf("Highest number = %d", highestNumber);
+    
+    return 0;
+}
